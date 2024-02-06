@@ -1,0 +1,96 @@
+{
+  "Buildings": {
+    "Buildings": {
+      "1": {
+        "GeneralInformation": {
+          "AIM_id": "1",
+          "location": {
+            "latitude": 37.7709536,
+            "longitude": -122.2939517
+          },
+          "Latitude": 37.7709536,
+          "Longitude": -122.2939517,
+          "NumberOfStories": 1,
+          "YearBuilt": 1953,
+          "OccupancyClass": "IND2",
+          "StructureType": "W1",
+          "PlanArea": 18615.30048,
+          "ReplacementCost": 38781.876,
+          "Population": 1,
+          "SoilType": "B",
+          "type": "Building",
+          "Footprint": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[-122.293878,37.771004],[-122.293973,37.771029],[-122.294025,37.770903],[-122.293931,37.770878],[-122.293878,37.771004]]]},\"properties\":{}}",
+          "units": {
+            "force": "kips",
+            "length": "inch",
+            "time": "sec"
+          },
+          "DesignLevel": "MC"
+        },
+        "Demand": {
+          "Units": {
+            "ONE-0-1": "unitless",
+            "PGA-1-1": "inchps2",
+            "PGD-1-1": "inch",
+            "PGD-1-3": "inch",
+            "SA_0.3-1-1": "inchps2",
+            "SA_1.0-1-1": "inchps2"
+          }
+        },
+        "Loss": {
+          "Units": {
+            "Cost-LF.IND2-LF.W1.MC": "loss_ratio",
+            "Cost-replacement-collapse": "loss_ratio",
+            "Time-LF.IND2-LF.W1.MC": "day",
+            "Time-replacement-collapse": "loss_ratio"
+          }
+        }
+      },
+      "2": {
+        "GeneralInformation": {
+          "AIM_id": "2",
+          "location": {
+            "latitude": 37.77157898,
+            "longitude": -122.294029
+          },
+          "Latitude": 37.77157898,
+          "Longitude": -122.294029,
+          "NumberOfStories": 1,
+          "YearBuilt": 1954,
+          "OccupancyClass": "IND2",
+          "StructureType": "W1",
+          "PlanArea": 248537.7936,
+          "ReplacementCost": 517787.07,
+          "Population": 1,
+          "SoilType": "B",
+          "type": "Building",
+          "Footprint": "{\"type\":\"Feature\",\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[-122.293612,37.771594],[-122.294017,37.771691],[-122.294000,37.771736],[-122.294181,37.771780],[-122.294192,37.771750],[-122.294354,37.771789],[-122.294407,37.771652],[-122.294209,37.771604],[-122.294268,37.771449],[-122.293907,37.771362],[-122.293855,37.771498],[-122.293666,37.771452],[-122.293612,37.771594]]]},\"properties\":{}}",
+          "units": {
+            "force": "kips",
+            "length": "inch",
+            "time": "sec"
+          },
+          "DesignLevel": "MC"
+        },
+        "Demand": {
+          "Units": {
+            "ONE-0-1": "unitless",
+            "PGA-1-1": "inchps2",
+            "PGD-1-1": "inch",
+            "PGD-1-3": "inch",
+            "SA_0.3-1-1": "inchps2",
+            "SA_1.0-1-1": "inchps2"
+          }
+        },
+        "Loss": {
+          "Units": {
+            "Cost-LF.IND2-LF.W1.MC": "loss_ratio",
+            "Cost-replacement-collapse": "loss_ratio",
+            "Time-LF.IND2-LF.W1.MC": "day",
+            "Time-replacement-collapse": "loss_ratio"
+          }
+        }
+      }
+    }
+  }
+}

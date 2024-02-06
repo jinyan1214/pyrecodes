@@ -1,0 +1,169 @@
+{
+    "crs": {
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        },
+        "type": "name"
+    },
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            -122.293878,
+                            37.771004
+                        ],
+                        [
+                            -122.293973,
+                            37.771029
+                        ],
+                        [
+                            -122.294025,
+                            37.770903
+                        ],
+                        [
+                            -122.293931,
+                            37.770878
+                        ],
+                        [
+                            -122.293878,
+                            37.771004
+                        ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "properties": {
+                "AIM_id": "1",
+                "DesignLevel": "MC",
+                "Latitude": 37.7709536,
+                "Longitude": -122.2939517,
+                "NumberOfStories": 1,
+                "OccupancyClass": "IND2",
+                "PlanArea": 18615.30048,
+                "Population": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 2,
+                "R2Dres_MostLikelyDamageState_GF.H.S-1": 0,
+                "R2Dres_MostLikelyDamageState_GF.V.S-1": 1,
+                "R2Dres_MostLikelyDamageState_LF.W1.MC-1": 1,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 8.38,
+                "R2Dres_mean_RepairTime": 24.3,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 19.262555920906777,
+                "R2Dres_std_RepairTime": 45.79830617484502,
+                "ReplacementCost": 38781.876,
+                "SoilType": "B",
+                "StructureType": "W1",
+                "YearBuilt": 1953,
+                "assetType": "Buildings",
+                "location": {
+                    "latitude": 37.7709536,
+                    "longitude": -122.2939517
+                },
+                "type": "Building"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            -122.293612,
+                            37.771594
+                        ],
+                        [
+                            -122.294017,
+                            37.771691
+                        ],
+                        [
+                            -122.294,
+                            37.771736
+                        ],
+                        [
+                            -122.294181,
+                            37.77178
+                        ],
+                        [
+                            -122.294192,
+                            37.77175
+                        ],
+                        [
+                            -122.294354,
+                            37.771789
+                        ],
+                        [
+                            -122.294407,
+                            37.771652
+                        ],
+                        [
+                            -122.294209,
+                            37.771604
+                        ],
+                        [
+                            -122.294268,
+                            37.771449
+                        ],
+                        [
+                            -122.293907,
+                            37.771362
+                        ],
+                        [
+                            -122.293855,
+                            37.771498
+                        ],
+                        [
+                            -122.293666,
+                            37.771452
+                        ],
+                        [
+                            -122.293612,
+                            37.771594
+                        ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "properties": {
+                "AIM_id": "2",
+                "DesignLevel": "MC",
+                "Latitude": 37.77157898,
+                "Longitude": -122.294029,
+                "NumberOfStories": 1,
+                "OccupancyClass": "IND2",
+                "PlanArea": 248537.7936,
+                "Population": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 1,
+                "R2Dres_MostLikelyDamageState_GF.H.S-1": 0,
+                "R2Dres_MostLikelyDamageState_GF.V.S-1": 1,
+                "R2Dres_MostLikelyDamageState_LF.W1.MC-1": 1,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 9.205,
+                "R2Dres_mean_RepairTime": 29.3,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 16.856359139337993,
+                "R2Dres_std_RepairTime": 46.56384777047445,
+                "ReplacementCost": 517787.07,
+                "SoilType": "B",
+                "StructureType": "W1",
+                "YearBuilt": 1954,
+                "assetType": "Buildings",
+                "location": {
+                    "latitude": 37.77157898,
+                    "longitude": -122.294029
+                },
+                "type": "Building"
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}

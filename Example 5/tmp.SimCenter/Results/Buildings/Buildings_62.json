@@ -1,0 +1,60 @@
+{
+  "Buildings": {
+    "1": {
+      "GeneralInformation": {},
+      "Demand": {
+        "PGA-1-1": 244.9002460693046,
+        "PGD-1-1": 4.589192615803757,
+        "PGD-1-3": 83.9284726667309,
+        "SA_0.3-1-1": 1.2721832518902796,
+        "SA_1.0-1-1": 142.78895226970403
+      },
+      "Damage": {
+        "GF.H.S-1": 1,
+        "GF.V.S-1": 2,
+        "LF.W1.MC-1": 2,
+        "collapse-0": 0
+      },
+      "Loss": {
+        "Repair": {
+          "Cost": {
+            "LF.IND2-LF.W1.MC": 10.0,
+            "replacement-collapse": 0.0
+          },
+          "Time": {
+            "LF.IND2-LF.W1.MC": 30.0,
+            "replacement-collapse": 0.0
+          }
+        }
+      }
+    },
+    "2": {
+      "GeneralInformation": {},
+      "Demand": {
+        "PGA-1-1": 244.9678151146944,
+        "PGD-1-1": 79.239145992735,
+        "PGD-1-3": 4.415450902190209,
+        "SA_0.3-1-1": 511.3909865661325,
+        "SA_1.0-1-1": 195.20940532165457
+      },
+      "Damage": {
+        "GF.H.S-1": 1,
+        "GF.V.S-1": 1,
+        "LF.W1.MC-1": 2,
+        "collapse-0": 0
+      },
+      "Loss": {
+        "Repair": {
+          "Cost": {
+            "LF.IND2-LF.W1.MC": 10.0,
+            "replacement-collapse": 0.0
+          },
+          "Time": {
+            "LF.IND2-LF.W1.MC": 30.0,
+            "replacement-collapse": 0.0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "Buildings": {
+    "1": {
+      "GeneralInformation": {},
+      "Demand": {
+        "PGA-1-1": 71.18899944302963,
+        "PGD-1-1": 0.9365201060190387,
+        "PGD-1-3": 11.720923067213132,
+        "SA_0.3-1-1": 0.5679315639047319,
+        "SA_1.0-1-1": 255.11444450345147
+      },
+      "Damage": {
+        "GF.H.S-1": 0,
+        "GF.V.S-1": 0,
+        "LF.W1.MC-1": 0,
+        "collapse-0": 0
+      },
+      "Loss": {
+        "Repair": {
+          "Cost": {
+            "LF.IND2-LF.W1.MC": 0.0,
+            "replacement-collapse": 0.0
+          },
+          "Time": {
+            "LF.IND2-LF.W1.MC": 0.0,
+            "replacement-collapse": 0.0
+          }
+        }
+      }
+    },
+    "2": {
+      "GeneralInformation": {},
+      "Demand": {
+        "PGA-1-1": 71.18899944302963,
+        "PGD-1-1": 0.9365201060190387,
+        "PGD-1-3": 11.720923067213132,
+        "SA_0.3-1-1": 0.5679315639047319,
+        "SA_1.0-1-1": 255.11444450345147
+      },
+      "Damage": {
+        "GF.H.S-1": 0,
+        "GF.V.S-1": 0,
+        "LF.W1.MC-1": 0,
+        "collapse-0": 0
+      },
+      "Loss": {
+        "Repair": {
+          "Cost": {
+            "LF.IND2-LF.W1.MC": 0.0,
+            "replacement-collapse": 0.0
+          },
+          "Time": {
+            "LF.IND2-LF.W1.MC": 0.0,
+            "replacement-collapse": 0.0
+          }
+        }
+      }
+    }
+  },
+  "TransportationNetwork": {
+    "Bridge": {
+      "0": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 59.64035653329211,
+          "PGD-1-1": 28.31055706428308,
+          "PGD-1-3": 2.3727022553594845,
+          "SA_0.3-1-1": 192.44349195770457,
+          "SA_1.0-1-1": 161.06935803163012
+        },
+        "Damage": {
+          "HWB.GF-1": 2,
+          "HWB.GS.1-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HWB-HWB.GF": 0.7,
+              "HWB-HWB.GS.1": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HWB-HWB.GF": 10.0,
+              "HWB-HWB.GS.1": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      }
+    },
+    "Roadway": {
+      "3015": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 56.858502260568365,
+          "PGD-1-1": 0.016380230201384495,
+          "PGD-1-3": 0.2243235507027444,
+          "SA_0.3-1-1": 0.4121917537082501,
+          "SA_1.0-1-1": 113.56978803485076
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3016": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 70.0661371248279,
+          "PGD-1-1": 0.4666180779825195,
+          "PGD-1-3": 0.037583563693855744,
+          "SA_0.3-1-1": 215.91425204275816,
+          "SA_1.0-1-1": 170.30864782841664
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3017": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 60.823263419178815,
+          "PGD-1-1": 1.76152183793276,
+          "PGD-1-3": 0.15009718765423546,
+          "SA_0.3-1-1": 160.45346916472795,
+          "SA_1.0-1-1": 230.8591155530762
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3020": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 56.858502260568365,
+          "PGD-1-1": 0.2243235507027444,
+          "PGD-1-3": 0.016380230201384495,
+          "SA_0.3-1-1": 0.4121917537082501,
+          "SA_1.0-1-1": 113.56978803485076
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3021": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 68.30363927811354,
+          "PGD-1-1": 0.2469920154663424,
+          "PGD-1-3": 0.018425892516755648,
+          "SA_0.3-1-1": 217.88718861603007,
+          "SA_1.0-1-1": 255.0505552149368
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3022": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 56.858502260568365,
+          "PGD-1-1": 0.016380230201384495,
+          "PGD-1-3": 0.2243235507027444,
+          "SA_0.3-1-1": 0.4121917537082501,
+          "SA_1.0-1-1": 113.56978803485076
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3023": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 70.0661371248279,
+          "PGD-1-1": 0.4666180779825195,
+          "PGD-1-3": 0.037583563693855744,
+          "SA_0.3-1-1": 215.91425204275816,
+          "SA_1.0-1-1": 170.30864782841664
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3024": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 56.858502260568365,
+          "PGD-1-1": 0.016380230201384495,
+          "PGD-1-3": 0.2243235507027444,
+          "SA_0.3-1-1": 0.4121917537082501,
+          "SA_1.0-1-1": 113.56978803485076
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      },
+      "3025": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 56.858502260568365,
+          "PGD-1-1": 0.016380230201384495,
+          "PGD-1-3": 0.2243235507027444,
+          "SA_0.3-1-1": 0.4121917537082501,
+          "SA_1.0-1-1": 113.56978803485076
+        },
+        "Damage": {
+          "HRD.GF.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HRD-HRD.GF.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      }
+    },
+    "Tunnel": {
+      "0": {
+        "GeneralInformation": {},
+        "Demand": {
+          "PGA-1-1": 67.02922575510841,
+          "PGD-1-1": 0.9872511164978031,
+          "PGD-1-3": 12.258449122872863,
+          "SA_0.3-1-1": 207.35530682437195,
+          "SA_1.0-1-1": 211.6749415662501
+        },
+        "Damage": {
+          "HTU.GF-1": 2,
+          "HTU.GS.2-1": 0,
+          "collapse-0": 0
+        },
+        "Loss": {
+          "Repair": {
+            "Cost": {
+              "HTU-HTU.GF": 0.75,
+              "HTU-HTU.GS.2": 0.0,
+              "replacement-collapse": 0.0
+            },
+            "Time": {
+              "HTU-HTU.GF": 10.0,
+              "HTU-HTU.GS.2": 0.0,
+              "replacement-collapse": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

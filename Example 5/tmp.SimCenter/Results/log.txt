@@ -1,0 +1,978 @@
+
+
+rWHALE workflow
+
+System Information:
+  local time zone: PST
+  start time: 2024-02-06T11:51:54
+  python: 3.9.13 (v3.9.13:6de2ca5339, May 17 2022, 11:23:25) 
+[Clang 6.0 (clang-600.0.57)]
+  numpy: 1.25.2
+  pandas: 2.0.3
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:51:54 Started running the workflow script
+         -----------------------------------------------------------------------
+11:51:54 Inputs provided:
+         workflow input file: /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/inputRWHALE.json
+         application registry file: /Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/Workflow/WorkflowApplications.json
+         run type: runningLocal
+         -----------------------------------------------------------------------
+11:51:54 Parsing application registry file
+         Loading the json file...
+           OK
+         Loading default values...
+           OK
+         Collecting application data...
+           OK
+         Successfully parsed application registry
+         -----------------------------------------------------------------------
+11:51:54 Parsing workflow input file
+         Loading the json file...
+           OK
+         The following units were specified: 
+           force: kips
+           length: inch
+           time: sec
+         The following output_types were requested: 
+           DM
+           DV
+           EDP
+         The following workflow defaults were overwritten:
+           driverFile: driver
+           edpFiles: ['EDP.json']
+           filenameDL: BIM.json
+           filenameEDP: EDP.json
+           filenameEVENT: EVENT.json
+           filenameSAM: SAM.json
+           filenameSIM: SIM.json
+           rvFiles: ['SAM.json', 'EVENT.json', 'SIM.json']
+           workflowInput: inputRWHALE.json
+           workflowOutput: EDP.json
+         Run dir : /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results
+         Local applications dir : /Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS
+         Remote applications dir : /Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS
+         Reference dir : /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/input_data
+         
+         Parsing the requested list of applications...
+         Found asset: Buildings 
+         Found asset: TransportationNetwork 
+         For Buildings in Assets
+           Registering application CSV_to_AIM 
+         For TransportationNetwork in Assets
+           Registering application GEOJSON_TO_ASSET 
+         UserInputGM is a passive application (i.e., it does not invoke any calculation within the workflow.
+         For Buildings in RegionalMapping
+           Registering application NearestNeighborEvents 
+         For TransportationNetwork in RegionalMapping
+           Registering application NearestNeighborEvents 
+         For Buildings in Simulation
+           Registering application IMasEDP 
+         For TransportationNetwork in Simulation
+           Registering application IMasEDP 
+         For Buildings in DL
+           Registering application Pelicun3 
+         For TransportationNetwork in DL
+           Registering application Pelicun3 
+         
+         Requested workflow:
+                Event : SimCenterEvent
+            Assets : 
+                Buildings : CSV_to_AIM
+            Assets : 
+                TransportationNetwork : GEOJSON_TO_ASSET
+            RegionalMapping : 
+                Buildings : NearestNeighborEvents
+            RegionalMapping : 
+                TransportationNetwork : NearestNeighborEvents
+            Simulation : 
+                Buildings : IMasEDP
+            Simulation : 
+                TransportationNetwork : IMasEDP
+            DL : 
+                Buildings : Pelicun3
+            DL : 
+                TransportationNetwork : Pelicun3
+         
+         Successfully parsed workflow inputs
+         -----------------------------------------------------------------------
+11:51:54 Initializing the working directory.
+         Working directory successfully initialized.
+         -----------------------------------------------------------------------
+11:51:54 Creating files for individual assets
+         
+         Creating initial asset information model (AIM) files for Buildings
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createAIM/CSV_to_AIM/CSV_to_AIM.py" "--assetFile" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/Buildings1-2.json" "--assetSourceFile" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/input_data/all_bldgs.csv" "--filter" "1-2" "--getRV" 
+
+         AIM files created for Buildings
+         
+Output: 0
+
+
+
+         
+         Asset Information Model (AIM) files successfully created.
+         
+         Creating initial asset information model (AIM) files for TransportationNetwork
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createAIM/GeoJSON_to_ASSET/GeoJSON_to_ASSET.py" "--assetFile" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/TransportationNetwork.json" "--assetType" "TransportationNetwork" "--inputJsonFile" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/inputRWHALE.json" "--getRV" 
+
+         AIM files created for TransportationNetwork
+         
+Output: 0
+
+
+
+         
+         Asset Information Model (AIM) files successfully created.
+         -----------------------------------------------------------------------
+11:52:00 Augmenting files for individual assets for Workflow
+11:52:00 Appending additional settings to the AIM files...
+         
+11:52:00 Appending additional settings to the AIM files...
+         
+         
+         Asset Information Model (AIM) files successfully augmented.
+         -----------------------------------------------------------------------
+11:52:00 Simulating regional event...
+         No Regional Event Application to run.
+         -----------------------------------------------------------------------
+
+11:52:00 Creating regional mapping...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performRegionalMapping/NearestNeighborEvents/NNE.py" "--assetFile" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/Buildings1-2.json" "--filenameEVENTgrid" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/input_data/EventGrid.csv" "--neighbors" "4" "--samples" "100" "--seed" "10" 
+
+Output: 0
+
+
+
+         Regional mapping successfully created.
+         -----------------------------------------------------------------------
+
+11:52:02 Creating regional mapping...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performRegionalMapping/NearestNeighborEvents/NNE.py" "--assetFile" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/TransportationNetwork.json" "--filenameEVENTgrid" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/input_data/EventGrid.csv" "--neighbors" "4" "--samples" "100" "--seed" "10" 
+
+Output: 0
+
+
+
+         Regional mapping successfully created.
+         -----------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:03 Buildings id 1 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/1-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:03 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:03 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:03 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/1-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/1-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:03 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:03 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:03 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/1-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/1" 
+
+         2024-02-06T19:52:04Z First line of DL_calculation
+         2024-02-06T19:52:04Z Initializing pelicun calculation...
+         2024-02-06T19:52:04Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:04Z Trying to auto-populate
+         2024-02-06T19:52:04Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:04 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:04 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:04 Buildings id 2 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/2-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:04 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:04 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:04 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/2-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/2-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:05 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:05 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:05 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/2-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/Buildings/2" 
+
+         2024-02-06T19:52:05Z First line of DL_calculation
+         2024-02-06T19:52:05Z Initializing pelicun calculation...
+         2024-02-06T19:52:05Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:05Z Trying to auto-populate
+         2024-02-06T19:52:06Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:06 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:06 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:06 Collecting Buildings damage and loss results
+         Damage and loss results collected successfully.
+         -----------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:06 TransportationNetwork id 0 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Bridge/0-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:06 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:06 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:06 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Bridge/0-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Bridge/0-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:06 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:06 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:06 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Bridge/0-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Bridge/0" 
+
+         2024-02-06T19:52:07Z First line of DL_calculation
+         2024-02-06T19:52:07Z Initializing pelicun calculation...
+         2024-02-06T19:52:07Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:07Z Trying to auto-populate
+         2024-02-06T19:52:07Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:07 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:07 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:07 TransportationNetwork id 3015 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3015-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:07 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:07 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:07 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3015-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3015-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:08 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:08 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:08 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3015-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3015" 
+
+         2024-02-06T19:52:08Z First line of DL_calculation
+         2024-02-06T19:52:08Z Initializing pelicun calculation...
+         2024-02-06T19:52:08Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:08Z Trying to auto-populate
+         2024-02-06T19:52:09Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:09 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:09 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:09 TransportationNetwork id 3016 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3016-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:09 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:09 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:09 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3016-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3016-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:09 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:09 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:09 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3016-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3016" 
+
+         2024-02-06T19:52:10Z First line of DL_calculation
+         2024-02-06T19:52:10Z Initializing pelicun calculation...
+         2024-02-06T19:52:10Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:10Z Trying to auto-populate
+         2024-02-06T19:52:10Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:10 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:10 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:10 TransportationNetwork id 3017 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3017-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:10 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:10 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:10 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3017-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3017-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:10 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:10 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:10 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3017-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3017" 
+
+         2024-02-06T19:52:11Z First line of DL_calculation
+         2024-02-06T19:52:11Z Initializing pelicun calculation...
+         2024-02-06T19:52:11Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:11Z Trying to auto-populate
+         2024-02-06T19:52:11Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:11 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:11 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:11 TransportationNetwork id 3020 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3020-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:11 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:11 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:11 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3020-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3020-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:12 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:12 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:12 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3020-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3020" 
+
+         2024-02-06T19:52:12Z First line of DL_calculation
+         2024-02-06T19:52:12Z Initializing pelicun calculation...
+         2024-02-06T19:52:12Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:12Z Trying to auto-populate
+         2024-02-06T19:52:13Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:13 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:13 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:13 TransportationNetwork id 3021 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3021-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:13 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:13 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:13 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3021-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3021-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:13 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:13 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:13 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3021-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3021" 
+
+         2024-02-06T19:52:14Z First line of DL_calculation
+         2024-02-06T19:52:14Z Initializing pelicun calculation...
+         2024-02-06T19:52:14Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:14Z Trying to auto-populate
+         2024-02-06T19:52:14Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:14 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:14 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:14 TransportationNetwork id 3022 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3022-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:14 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:14 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:14 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3022-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3022-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:15 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:15 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:15 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3022-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3022" 
+
+         2024-02-06T19:52:15Z First line of DL_calculation
+         2024-02-06T19:52:15Z Initializing pelicun calculation...
+         2024-02-06T19:52:15Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:15Z Trying to auto-populate
+         2024-02-06T19:52:16Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:16 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:16 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:16 TransportationNetwork id 3023 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3023-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:16 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:16 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:16 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3023-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3023-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:16 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:16 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:16 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3023-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3023" 
+
+         2024-02-06T19:52:17Z First line of DL_calculation
+         2024-02-06T19:52:17Z Initializing pelicun calculation...
+         2024-02-06T19:52:17Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:17Z Trying to auto-populate
+         2024-02-06T19:52:17Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:17 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:17 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:17 TransportationNetwork id 3024 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3024-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:17 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:17 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:17 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3024-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3024-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:17 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:17 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:17 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3024-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3024" 
+
+         2024-02-06T19:52:18Z First line of DL_calculation
+         2024-02-06T19:52:18Z Initializing pelicun calculation...
+         2024-02-06T19:52:18Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:18Z Trying to auto-populate
+         2024-02-06T19:52:18Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:18 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:18 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:18 TransportationNetwork id 3025 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3025-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:18 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:18 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:18 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3025-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3025-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:19 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:19 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:19 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3025-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Roadway/3025" 
+
+         2024-02-06T19:52:19Z First line of DL_calculation
+         2024-02-06T19:52:19Z Initializing pelicun calculation...
+         2024-02-06T19:52:19Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:19Z Trying to auto-populate
+         2024-02-06T19:52:20Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:20 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:20 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+         
+--------------------------------------------------------------------------------
+11:52:20 TransportationNetwork id 0 in file /Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Tunnel/0-AIM.json
+         -----------------------------------------------------------------------
+
+Starting sWHALE workflow
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:20 Running the workflow script
+         -----------------------------------------------------------------------
+11:52:20 Initializing the simulation directory
+         
+         Simulation directory successfully initialized.
+         
+         -----------------------------------------------------------------------
+11:52:20 Running preprocessing step random variables
+         
+         Running Event app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/createEVENT/SimCenterEvent/SimCenterEvent.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Tunnel/0-AIM.json" "--filenameEVENT" "EVENT.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+         
+         Running Simulation app at preprocessing step...
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performSIMULATION/IMasEDP/IMasEDP.py" "--filenameAIM" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Tunnel/0-AIM.json" "--filenameSAM" "SAM.json" "--filenameEVENT" "EVENT.json" "--filenameEDP" "EDP.json" "--filenameSIM" "SIM.json" "--getRV" 
+
+Output: 0
+
+
+
+         Preprocessing successfully completed.
+         -----------------------------------------------------------------------
+11:52:20 No UQ requested, workflow driver is not needed.
+         -----------------------------------------------------------------------
+         Gathering Workflow Inputs.
+11:52:20 No UQ requested, response simulation step is skipped.
+         -----------------------------------------------------------------------
+11:52:20 Running damage and loss assessment
+         Damage and loss assessment command (1):
+
+"/Library/Frameworks/Python.framework/Versions/3.9/bin/python3" "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/applications/performDL/pelicun3/DL_calculation.py" "--filenameDL" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Tunnel/0-AIM.json" "--demandFile" "response.csv" "--Realizations" "100" "--auto_script" "PelicunDefault/Hazus_Earthquake_IM.py" "--coupled_EDP" "True" "--detailed_results" "False" "--event_time" "off" "--ground_failure" "True" "--log_file" "True" "--regional" "true" "--resource_dir" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results" "--dirnameOutput" "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter/Results/TransportationNetwork/Tunnel/0" 
+
+         2024-02-06T19:52:21Z First line of DL_calculation
+         2024-02-06T19:52:21Z Initializing pelicun calculation...
+         2024-02-06T19:52:21Z Damage and Loss configuration missing from config file. 
+         2024-02-06T19:52:21Z Trying to auto-populate
+         2024-02-06T19:52:21Z pelicun calculation completed.
+         
+         Damage and loss assessment finished successfully.
+         -----------------------------------------------------------------------
+11:52:21 No performance assessment requested, performance assessment step is skipped.
+         -----------------------------------------------------------------------
+11:52:21 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+11:52:21 Collecting TransportationNetwork damage and loss results
+         Damage and loss results collected successfully.
+         -----------------------------------------------------------------------
+11:52:22 Workflow completed.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------

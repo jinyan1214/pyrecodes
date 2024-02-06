@@ -1,0 +1,11 @@
+{
+    "ComponentLibrary": {
+        "ComponentLibraryCreatorClass": "JSONComponentLibraryCreator",
+        "ComponentLibraryFile": "./Example 5/PyrecodesComponentLibrary.json"
+    },
+    "System": {
+        "SystemCreatorClass": "R2DSystemCreator",
+        "SystemClass": "BuiltEnvironmentSystem",
+        "SystemConfigurationFile": "./Example 5/PyrecodesSystemConfiguration.json"
+    }
+}

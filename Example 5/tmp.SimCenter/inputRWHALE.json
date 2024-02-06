@@ -1,0 +1,227 @@
+{
+    "Applications": {
+        "Assets": {
+            "Buildings": {
+                "Application": "CSV_to_AIM",
+                "ApplicationData": {
+                    "assetSourceFile": "all_bldgs.csv",
+                    "filter": "1-2",
+                    "inputIsGIS": false,
+                    "pathToSource": "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/Examples/E14BasicHAZUSTransportation/input_data"
+                }
+            },
+            "TransportationNetwork": {
+                "Application": "GEOJSON_TO_ASSET",
+                "ApplicationData": {
+                    "Bridge": {
+                        "filter": "0"
+                    },
+                    "Roadway": {
+                        "filter": "3015-3017,3020-3025"
+                    },
+                    "Tunnel": {
+                        "filter": "0"
+                    },
+                    "assetSourceFile": "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/Examples/E14BasicHAZUSTransportation/input_data/AI_hwy_inventory.geojson"
+                }
+            }
+        },
+        "DL": {
+            "Buildings": {
+                "Application": "Pelicun3",
+                "ApplicationData": {
+                    "DL_Method": "HAZUS MH EQ IM",
+                    "Realizations": 100,
+                    "auto_script": "PelicunDefault/Hazus_Earthquake_IM.py",
+                    "coupled_EDP": true,
+                    "detailed_results": false,
+                    "event_time": "off",
+                    "ground_failure": true,
+                    "log_file": true,
+                    "regional": "true"
+                }
+            },
+            "TransportationNetwork": {
+                "Application": "Pelicun3",
+                "ApplicationData": {
+                    "DL_Method": "HAZUS MH EQ IM",
+                    "Realizations": 100,
+                    "auto_script": "PelicunDefault/Hazus_Earthquake_IM.py",
+                    "coupled_EDP": true,
+                    "detailed_results": false,
+                    "event_time": "off",
+                    "ground_failure": true,
+                    "log_file": true,
+                    "regional": "true"
+                }
+            }
+        },
+        "Events": [
+            {
+                "Application": "SimCenterEvent",
+                "ApplicationData": {
+                },
+                "EventClassification": "Earthquake"
+            }
+        ],
+        "Modeling": {
+            "Buildings": {
+                "Application": "None",
+                "ApplicationData": {
+                }
+            },
+            "TransportationNetwork": {
+                "Application": "None",
+                "ApplicationData": {
+                }
+            }
+        },
+        "RegionalEvent": {
+            "Application": "UserInputGM",
+            "ApplicationData": {
+            }
+        },
+        "RegionalMapping": {
+            "Buildings": {
+                "Application": "NearestNeighborEvents",
+                "ApplicationData": {
+                    "neighbors": 4,
+                    "samples": 100,
+                    "seed": 10
+                }
+            },
+            "TransportationNetwork": {
+                "Application": "NearestNeighborEvents",
+                "ApplicationData": {
+                    "neighbors": 4,
+                    "samples": 100,
+                    "seed": 10
+                }
+            }
+        },
+        "Simulation": {
+            "Buildings": {
+                "Application": "IMasEDP",
+                "ApplicationData": {
+                }
+            },
+            "TransportationNetwork": {
+                "Application": "IMasEDP",
+                "ApplicationData": {
+                }
+            }
+        },
+        "UQ": {
+            "Buildings": {
+                "Application": "None",
+                "ApplicationData": {
+                }
+            },
+            "TransportationNetwork": {
+                "Application": "None",
+                "ApplicationData": {
+                }
+            }
+        }
+    },
+    "Assets": {
+        "Buildings": {
+        },
+        "TransportationNetwork": {
+        }
+    },
+    "Author": "SimCenter",
+    "DL": {
+        "Buildings": {
+        },
+        "TransportationNetwork": {
+        }
+    },
+    "DefaultValues": {
+        "driverFile": "driver",
+        "edpFiles": [
+            "EDP.json"
+        ],
+        "filenameDL": "BIM.json",
+        "filenameEDP": "EDP.json",
+        "filenameEVENT": "EVENT.json",
+        "filenameSAM": "SAM.json",
+        "filenameSIM": "SIM.json",
+        "rvFiles": [
+            "SAM.json",
+            "EVENT.json",
+            "SIM.json"
+        ],
+        "workflowInput": "scInput.json",
+        "workflowOutput": "EDP.json"
+    },
+    "Modeling": {
+        "Buildings": {
+        },
+        "TransportationNetwork": {
+        }
+    },
+    "Name": "E14 - HAZUS Transportation",
+    "RegionalEvent": {
+        "eventFile": "EventGrid.csv",
+        "eventFilePath": "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS/Examples/E14BasicHAZUSTransportation/input_data/IMs",
+        "units": {
+            "PGA": "inchps2",
+            "PGD_h": "inch",
+            "PGD_v": "inch",
+            "SA_0.3": "inchps2",
+            "SA_1.0": "inchps2"
+        }
+    },
+    "RegionalMapping": {
+        "Buildings": {
+        },
+        "TransportationNetwork": {
+        }
+    },
+    "Simulation": {
+        "Buildings": {
+            "type": "IMasEDP"
+        },
+        "TransportationNetwork": {
+            "type": "IMasEDP"
+        }
+    },
+    "UQ": {
+        "Buildings": {
+        },
+        "TransportationNetwork": {
+        }
+    },
+    "WorkflowType": "Regional Simulation",
+    "assets": {
+        "buildings": true,
+        "gas": false,
+        "soil": false,
+        "transportation": true,
+        "waste": false,
+        "water": false
+    },
+    "commonFileDir": "input_data",
+    "localAppDir": "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS",
+    "outputs": {
+        "AIM": false,
+        "DM": true,
+        "DV": true,
+        "EDP": true,
+        "IM": false,
+        "every_realization": false
+    },
+    "randomVariables": [
+    ],
+    "remoteAppDir": "/Users/jinyanzhao/Desktop/SimCenterBuild/build-R2D-R2DbuildTest-Release/R2D.app/Contents/MacOS",
+    "runDir": "/Users/jinyanzhao/Documents/R2D/LocalWorkDir/tmp.SimCenter",
+    "runType": "runningLocal",
+    "type": "Earthquake",
+    "units": {
+        "force": "kips",
+        "length": "inch",
+        "time": "sec"
+    },
+    "workingDir": "/Users/jinyanzhao/Documents/R2D/LocalWorkDir"
+}

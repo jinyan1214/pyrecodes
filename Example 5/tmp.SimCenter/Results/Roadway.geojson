@@ -1,0 +1,526 @@
+{
+    "crs": {
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        },
+        "type": "name"
+    },
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.28588099975882,
+                        37.77632400012012
+                    ],
+                    [
+                        -122.28574500021472,
+                        37.776316000146586
+                    ],
+                    [
+                        -122.28534000015874,
+                        37.776295000123184
+                    ],
+                    [
+                        -122.28532400026525,
+                        37.776295000123184
+                    ],
+                    [
+                        -122.28520600026445,
+                        37.77628499997468
+                    ],
+                    [
+                        -122.28508900008858,
+                        37.776264999673586
+                    ],
+                    [
+                        -122.28479807687329,
+                        37.77619721186654
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3015",
+                "EndNode": 3369,
+                "ExplodeID": 0,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.4085,
+                "R2Dres_mean_RepairTime": 19.27,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.4006342824607354,
+                "R2Dres_std_RepairTime": 28.85171248178023,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 0,
+                "SoilType": "A",
+                "StartNode": 217,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77628184347495,
+                    "longitude": -122.28533659228832
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.28479807687329,
+                        37.77619721186654
+                    ],
+                    [
+                        -122.2847800002921,
+                        37.77619299982304
+                    ],
+                    [
+                        -122.28461299988751,
+                        37.77614100024239
+                    ],
+                    [
+                        -122.28444300000821,
+                        37.776088000181545
+                    ],
+                    [
+                        -122.28378953879911,
+                        37.77585011413769
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3016",
+                "EndNode": 3370,
+                "ExplodeID": 0,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.4255,
+                "R2Dres_mean_RepairTime": 21.29,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.3998418247863583,
+                "R2Dres_std_RepairTime": 29.9451670608636,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 1,
+                "SoilType": "A",
+                "StartNode": 3369,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77602971267784,
+                    "longitude": -122.28429180787074
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.28378953879911,
+                        37.77585011413769
+                    ],
+                    [
+                        -122.28289099955646,
+                        37.77552300015911
+                    ],
+                    [
+                        -122.28279000017243,
+                        37.7754859997845
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3017",
+                "EndNode": 1261,
+                "ExplodeID": 0,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 3,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 3,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.5445,
+                "R2Dres_mean_RepairTime": 25.67,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.375371533122569,
+                "R2Dres_std_RepairTime": 30.73380496581521,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 2,
+                "SoilType": "A",
+                "StartNode": 3370,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77566814878276,
+                    "longitude": -122.28328973595283
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.29093700024886,
+                        37.77647300026806
+                    ],
+                    [
+                        -122.2907649998214,
+                        37.776463999872156
+                    ],
+                    [
+                        -122.29058300024653,
+                        37.7764559999137
+                    ],
+                    [
+                        -122.29024900033568,
+                        37.77644799995444
+                    ],
+                    [
+                        -122.29007699990822,
+                        37.77644400032952
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3020",
+                "EndNode": 1931,
+                "ExplodeID": 3,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.179,
+                "R2Dres_mean_RepairTime": 7.02,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.3209188197798453,
+                "R2Dres_std_RepairTime": 18.88614477987672,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 0,
+                "SoilType": "A",
+                "StartNode": 1576,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77645579639975,
+                    "longitude": -122.29050709953516
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.29007699990822,
+                        37.77644400032952
+                    ],
+                    [
+                        -122.29000900013617,
+                        37.77644500005823
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3021",
+                "EndNode": 1932,
+                "ExplodeID": 4,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.155,
+                "R2Dres_mean_RepairTime": 6.78,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.2982694192582378,
+                "R2Dres_std_RepairTime": 18.89448639581441,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 0,
+                "SoilType": "A",
+                "StartNode": 1931,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.776444500193875,
+                    "longitude": -122.29004300002221
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.29000900013617,
+                        37.77644500005823
+                    ],
+                    [
+                        -122.2898209998152,
+                        37.7764370000978
+                    ],
+                    [
+                        -122.28975800006602,
+                        37.77643499993002
+                    ],
+                    [
+                        -122.28962199962356,
+                        37.77642900013648
+                    ],
+                    [
+                        -122.28917800010787,
+                        37.77641499966957
+                    ],
+                    [
+                        -122.28903300034291,
+                        37.776411000042856
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3022",
+                "EndNode": 676,
+                "ExplodeID": 5,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.1825,
+                "R2Dres_mean_RepairTime": 7.67,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.3231298172374051,
+                "R2Dres_std_RepairTime": 19.894700070850305,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 0,
+                "SoilType": "A",
+                "StartNode": 1932,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77642662156814,
+                    "longitude": -122.28952104968909
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.28903300034291,
+                        37.776411000042856
+                    ],
+                    [
+                        -122.28883800034923,
+                        37.776405000247344
+                    ],
+                    [
+                        -122.28825500001804,
+                        37.776387000147835
+                    ],
+                    [
+                        -122.28806099984928,
+                        37.77638200007998
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3023",
+                "EndNode": 1933,
+                "ExplodeID": 6,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.1835,
+                "R2Dres_mean_RepairTime": 8.33,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.3186980300275393,
+                "R2Dres_std_RepairTime": 20.815230923144675,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 0,
+                "SoilType": "A",
+                "StartNode": 676,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77639611263491,
+                    "longitude": -122.28854701104882
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.28806099984928,
+                        37.77638200007998
+                    ],
+                    [
+                        -122.28762400000628,
+                        37.776369999773735
+                    ],
+                    [
+                        -122.28697099831145,
+                        37.77635296632406
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3024",
+                "EndNode": 3371,
+                "ExplodeID": 7,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.2205,
+                "R2Dres_mean_RepairTime": 8.71,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.3460524132660726,
+                "R2Dres_std_RepairTime": 20.768223104278587,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 0,
+                "SoilType": "A",
+                "StartNode": 1933,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77636730323636,
+                    "longitude": -122.28751600389855
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -122.28697099831145,
+                        37.77635296632406
+                    ],
+                    [
+                        -122.2865889997635,
+                        37.77634299996512
+                    ],
+                    [
+                        -122.28649900025012,
+                        37.776340000064685
+                    ],
+                    [
+                        -122.28641499968622,
+                        37.77633799989429
+                    ],
+                    [
+                        -122.28631699977691,
+                        37.77633499999356
+                    ],
+                    [
+                        -122.28588099975882,
+                        37.77632400012012
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "AIM_id": "3025",
+                "EndNode": 217,
+                "ExplodeID": 7,
+                "MaxMPH": 25,
+                "NumOfLanes": 1,
+                "R2Dres_MostLikelyCriticalDamageState": 0,
+                "R2Dres_MostLikelyDamageState_HRD.GF.2-1": 0,
+                "R2Dres_MostLikelyDamageState_collapse-0": 0,
+                "R2Dres_mean_Collapse": 0,
+                "R2Dres_mean_Irreparable": 0,
+                "R2Dres_mean_RepairCost": 0.277,
+                "R2Dres_mean_RepairTime": 10.58,
+                "R2Dres_std_Collapse": 0,
+                "R2Dres_std_Irreparable": 0,
+                "R2Dres_std_RepairCost": 0.3690979996333404,
+                "R2Dres_std_RepairTime": 22.315995078948117,
+                "RoadHazusClass": "HRD2",
+                "RoadType": "residential",
+                "SegID": 1,
+                "SoilType": "A",
+                "StartNode": 3371,
+                "TigerOID": "1102325761249",
+                "assetSubtype": "Roadway",
+                "assetType": "TransportationNetwork",
+                "location": {
+                    "latitude": 37.77633832998635,
+                    "longitude": -122.28642600319098
+                },
+                "type": "Roadway"
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}
