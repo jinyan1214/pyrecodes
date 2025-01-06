@@ -160,7 +160,7 @@ class JSONSystemCreator(ConcreteSystemCreator):
                 component_object.set_locality([self.format_locality_id(locality), self.format_locality_id(link_to)])
                 self.add_component(component_object)
 
-class R2DSystemCreator(ConcreteSystemCreator):
+class R2DSystemCreatorOld(ConcreteSystemCreator):
     """
     Create a System based on SimCenter R2D Tool's output files for Example 1.
     """
@@ -250,7 +250,7 @@ class R2DSystemCreator(ConcreteSystemCreator):
     def get_building_damage_state(self, building_data: dict) -> int:
         return building_data['Damage']['highest_damage_state/S'][self.scenario_id]
 
-class R2DSystemWithInterfacesCreator(R2DSystemCreator):
+class R2DSystemWithInterfacesCreator(R2DSystemCreatorOld):
     """
     Create a System based on SimCenter R2D Tool's output files for Example 1 with infrastructure interfaces.
     """
@@ -314,7 +314,7 @@ class R2DResidentialBuildingParametersSetter(ComponentParametersSetter):
         self.set_housing_parameters(component, locality)
         self.set_operation_demand_parameters(component, locality, building_data.get('OperationDemandResources', []))
         self.set_repair_parameters(component, building_data, building_DS)       
-        component.set_locality([R2DSystemCreator.format_locality_id(locality)])
+        component.set_locality([R2DSystemCreatorOld.format_locality_id(locality)])
         return component
 
     def set_building_geometry(self, component, building_data: dict):

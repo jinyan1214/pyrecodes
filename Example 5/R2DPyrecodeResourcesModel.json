@@ -1,0 +1,148 @@
+{
+    "Shelter": {
+        "Group": "Utilities",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "SupplierOnlyDistributionPriority",
+                                                        "Parameters": {}}
+                                }
+                              }
+                            },
+    "FunctionalHousing": {
+        "Group": "Utilities",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                                "Parameters": {
+                                "DistributionPriority": {"Type": "SupplierOnlyDistributionPriority",
+                                                        "Parameters": {}}
+                                }
+                                }
+                            },    
+    "FirstResponderEngineer": {  
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                              }
+                            },
+    "SeniorEngineer": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "Contractor": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "Money": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "PlanCheckEngineeringTeam": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "SitePreparationCrew": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "CleanUpCrew": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "EngineeringDesignTeam": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "DemolitionCrew": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "RepairCrew": {     
+        "Group": "RecoveryResources",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriority",
+                                                        "Parameters": {"Seed": 42.0, "DemandType": ["RecoveryDemand"]}}
+                                }
+                                }
+                            },
+    "ElectricPower": {
+        "Group": "Utilities",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                              "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriorityWithPrioritizedInterfaces",
+                                                         "Parameters": {"Seed": 42.0, "DemandType": ["OperationDemand"]}},
+
+                                "TransferService": "IsolatingLocalitiesTransferService"}
+                              }
+        },
+    "PotableWater": {
+        "Group": "Utilities",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                                "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriorityWithPrioritizedInterfaces",
+                                                            "Parameters": {"Seed": 42.0, "DemandType": ["OperationDemand"]}},
+
+                                "TransferService": "IsolatingLocalitiesTransferService"}
+                                }
+        },
+    "CellularCommunication": {
+        "Group": "Utilities",
+        "IsCommunicationResource": "True",
+        "DistributionModel": {"Type": "UtilityDistributionModel",
+                                "Parameters": {
+                                "DistributionPriority": {"Type": "RandomPriorityWithPrioritizedInterfaces",
+                                                            "Parameters": {"Seed": 42.0, "DemandType": ["OperationDemand"]}},
+                                "TransferService": "IsolatingLocalitiesTransferService"}
+                                }
+        },
+    "IsolatingLocalitiesTransferService": {
+        "Group": "TransferService",
+        "DistributionModel": {"Type": "TransferServiceDistributionModelPotentialPathSets",
+                              "Parameters": {
+                                "PathSetsFile": "./Example 4/potential_path_sets.json"
+                              }}
+    }
+
+}

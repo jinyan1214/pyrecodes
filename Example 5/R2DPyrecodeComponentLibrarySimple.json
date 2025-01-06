@@ -1,0 +1,918 @@
+{
+    "EmergencyResponseCenter": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "NoRecoveryActivityModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "FirstResponderEngineer": {
+                "Amount": 50,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "SeniorEngineer": {
+                "Amount": 50,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "Contractor": {
+                "Amount": 50,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "Money": {
+                "Amount": 5500000000,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "PlanCheckEngineeringTeam": {
+                "Amount": 20,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "SitePreparationCrew": {
+                "Amount": 20,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "CleanUpCrew": {
+                "Amount": 20,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "EngineeringDesignTeam": {
+                "Amount": 50,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "DemolitionCrew": {
+                "Amount": 10,
+                "FunctionalityToAmountRelation": "Linear"
+            },
+            "RepairCrew": {
+                "Amount": 400,
+                "FunctionalityToAmountRelation": "Linear"
+            }
+        }
+    },
+    "DS0_ResidentialBuilding": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "NoRecoveryActivityModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS1_ResidentialBuilding": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 1,
+                            "Dispersion": 0.2
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS2_ResidentialBuilding": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 2,
+                            "Dispersion": 0.2
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 0
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "ReverseBinary"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS3_ResidentialBuilding": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 3,
+                            "Dispersion": 0.2
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 0
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "ReverseBinary"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS4_ResidentialBuilding": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 4,
+                            "Dispersion": 0.2
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 0
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "ReverseBinary"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS0_Bridge": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "NoRecoveryActivityModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS1_Bridge": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 0.6,
+                            "Dispersion": 1
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS2_Bridge": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 2.5,
+                            "Dispersion": 1.08
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS3_Bridge": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 75,
+                            "Dispersion": 0.56
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS4_Bridge": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 230,
+                            "Dispersion": 0.478
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS0_Tunnel": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "NoRecoveryActivityModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS1_Tunnel": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 0.5,
+                            "Dispersion": 0.6
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS2_Tunnel": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 2.4,
+                            "Dispersion": 0.833
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS3_Tunnel": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 45,
+                            "Dispersion": 0.667
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS4_Tunnel": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 210,
+                            "Dispersion": 0.524
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS0_Roadway": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "NoRecoveryActivityModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Linear"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS1_Roadway": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 0.9,
+                            "Dispersion": 0.056
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS2_Roadway": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 2.2,
+                            "Dispersion": 0.818
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "DS3_Roadway": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "ComponentLevelRecoveryActivitiesModel",
+            "Parameters": {
+                "Repair": {
+                    "Duration": {
+                        "Lognormal": {
+                            "Median": 21,
+                            "Dispersion": 0.762
+                        }
+                    },
+                    "Demand": [
+                        {
+                            "Resource": "RepairCrew",
+                            "Amount": 10
+                        }
+                    ],
+                    "PrecedingActivities": []
+                }
+            },
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "TransporationService": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "FunctionalHousing": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "ElectricPowerSupplySystem": {
+        "ComponentClass": "InfrastructureInterface",
+        "RecoveryModel": {
+            "Type": "InfrastructureInterfaceRecoveryModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": "MultipleSteps"
+        },
+        "Supply": {
+            "ElectricPower": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Binary"
+            }
+        },
+        "OperationDemand": {
+            "CellularCommunication": {
+                "Amount": 0.0,
+                "FunctionalityToAmountRelation": "Constant"
+            }
+        }
+    },
+    "WaterSupplySystem": {
+        "ComponentClass": "InfrastructureInterface",
+        "RecoveryModel": {
+            "Type": "InfrastructureInterfaceRecoveryModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": ""
+        },
+        "Supply": {
+            "PotableWater": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Binary"
+            }
+        },
+        "OperationDemand": {
+            "ElectricPower": {
+                "Amount": 0.0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "CellularCommunication": {
+                "Amount": 0.0,
+                "FunctionalityToAmountRelation": "Binary"
+            }
+        }
+    },
+    "CellularCommunicationSystem": {
+        "ComponentClass": "InfrastructureInterface",
+        "RecoveryModel": {
+            "Type": "InfrastructureInterfaceRecoveryModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": ""
+        },
+        "Supply": {
+            "CellularCommunication": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Binary"
+            }
+        },
+        "OperationDemand": {
+            "ElectricPower": {
+                "Amount": 0.0,
+                "FunctionalityToAmountRelation": "Constant"
+            },
+            "CellularCommunication": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Binary"
+            }
+        }
+    }
+}

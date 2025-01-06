@@ -209,8 +209,8 @@ class DistributionListCreator:
                     if self.resource_is_interdependent(resource_name, component):
                         resource_distribution_dict['InterdependentResources'].append(resource_name)
                         break
-                else:
-                    resource_distribution_dict['IndependentResources'].append(resource_name)
+                    else:
+                        resource_distribution_dict['IndependentResources'].append(resource_name)
 
         return resource_distribution_dict
     
@@ -380,6 +380,22 @@ class BuiltEnvironmentSystem(System):
         """
         self.system_creator.setup(self.component_library, self.system_configuration)
         self.components = self.system_creator.create_components()
+        self.resources = self.system_creator.get_resource_parameters(self.components)
+        self.resilience_calculators = self.system_creator.get_resilience_calculators()
+        self.START_TIME_STEP = self.system_creator.START_TIME_STEP
+        self.MAX_TIME_STEP = self.system_creator.MAX_TIME_STEP
+        self.DISASTER_TIME_STEP = self.system_creator.DISASTER_TIME_STEP
+        self.recovery_target_checker = CompleteDamageRecoveryTargetChecker()
+        self.set_resource_distribution_dict()
+        self.set_damage_input()
+    
+    def create_system_from_realization(self, realization_to_run: int):
+        """
+        Creates the system based on the provided SystemCreator object.
+        """
+        self.system_creator.setup(self.component_library,\
+                                  self.system_configuration, realization_to_run)
+        self.components = self.system_creator.create_components(realization_to_run)
         self.resources = self.system_creator.get_resource_parameters(self.components)
         self.resilience_calculators = self.system_creator.get_resilience_calculators()
         self.START_TIME_STEP = self.system_creator.START_TIME_STEP

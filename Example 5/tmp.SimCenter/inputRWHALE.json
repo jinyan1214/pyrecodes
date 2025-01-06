@@ -122,6 +122,12 @@
                 "ApplicationData": {
                 }
             }
+        },
+        "REC": {
+            "Application": "Pyrecode",
+            "ApplicationData": {
+                "configFile": "REC_config.json"
+            }
         }
     },
     "Assets": {

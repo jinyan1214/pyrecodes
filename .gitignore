@@ -7,3 +7,7 @@
 dist/
 pyrecodes.egg-info/
 build/
+env_pyrecodes/.DS_Store
+Example 3/.DS_Store
+pyrecodes/__pychache__*
+*.DS_Store

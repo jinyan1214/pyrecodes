@@ -1,0 +1,71 @@
+{
+    "Constants": {
+        "START_TIME_STEP": 0,
+        "MAX_TIME_STEP": 3650,
+        "DISASTER_TIME_STEP": 1,
+        "DS4_REPAIR_DURATION": 240,
+        "MAX_REPAIR_CREW_DEMAND_PER_BUILDING": 50,
+        "MAX_RESIDENTS_PER_BUILDING": 2000,
+        "HOUSING_RESOURCES": ["Shelter"],
+        "REPAIR_CREW_DEMAND_PER_SQFT": {
+            "DS1": 5400,
+            "DS2": 5400,
+            "DS3": 2700,
+            "DS4": 2700
+        },
+        "DEFAULT_REPAIR_DURATION_DICT": {
+            "Lognormal": {
+                "Median": 0,
+                "Dispersion": 0.3
+            }
+        },
+        "DefaultAreaPerPerson":541
+    },
+    "LocalityBoundaryFile":"/Users/jinyanzhao/Desktop/SimCenterBuild/pyrecodes/Example 5/Census_Tract_Boundaries_AI.geojson",
+    "ComponentsFolder":"/Users/jinyanzhao/Desktop/SimCenterBuild/pyrecodes/Example 5/tmp.SimCenter/Results",
+    "RecoveryResourceSuppliers":{
+        "EmergencyResponseCenter":{
+            "Longitude": -122.2310,
+            "Latitude": 37.7647
+        }
+    },
+    "DamageInput": {
+        "Type": "R2DDamageSample",
+        "Parameters": {
+            "SampleSize": 10,
+            "Seed": 52
+        }
+    },
+    "Resources":{
+        "Model":"/Users/jinyanzhao/Desktop/SimCenterBuild/pyrecodes/Example 5/R2DPyrecodeResourcesModel.json",
+        "Parameters": {
+            "Seed": 52,
+            "TransferPathSetsFile": "./Example 4/potential_path_sets.json"
+        }
+    },
+    "ResilienceCalculator": [
+        {"Type": "ReCoDeSResilienceCalculator",
+        "Parameters": {"Scope": "All", 
+                       "Resources": ["Shelter", "FunctionalHousing", "ElectricPower", "PotableWater", "CellularCommunication"]}
+        },
+        {"Type": "ReCoDeSResilienceCalculator",
+        "Parameters": {"Scope": "0", 
+                       "Resources": ["Shelter", "FunctionalHousing", "ElectricPower", "PotableWater", "CellularCommunication"]}
+        },
+        {"Type": "ReCoDeSResilienceCalculator",
+        "Parameters": {"Scope": "1", 
+                       "Resources": ["Shelter", "FunctionalHousing", "ElectricPower", "PotableWater", "CellularCommunication"]}
+        },
+        {
+            "Type": "NISTGoalsResilienceCalculator",
+            "Parameters": [
+                {
+                    "Resource": ["Shelter", "FunctionalHousing", "ElectricPower", "PotableWater", "CellularCommunication"],
+                    "Scope": "All",
+                    "DesiredFunctionalityLevel": 0.95
+                }
+            ]
+        }
+    ],
+    "ComponentLibrary":"/Users/jinyanzhao/Desktop/SimCenterBuild/pyrecodes/Example 5/R2DPyrecodeComponentLibrarySimple.json"
+}

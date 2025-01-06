@@ -4,7 +4,7 @@
         "ComponentLibraryFile": "./Example 3/NorthEast_SF_Housing_ComponentLibrary.json"
     },
     "System": {
-        "SystemCreatorClass": "R2DSystemCreator",
+        "SystemCreatorClass": "R2DSystemCreatorOld",
         "SystemClass": "BuiltEnvironmentSystem",
         "SystemConfigurationFile": "./Example 3/NorthEast_SF_Housing_SystemConfiguration.json"
     }

@@ -696,5 +696,31 @@
                 "FunctionalityToAmountRelation": "Constant"
             }
         }
+    },
+    "DS0_HwyBridge": {
+        "ComponentClass": "StandardiReCoDeSComponent",
+        "RecoveryModel": {
+            "Type": "NoRecoveryActivityModel",
+            "Parameters": {},
+            "DamageFunctionalityRelation": {
+                "Type": "Constant"
+            }
+        },
+        "Supply": {
+            "Tranportation": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Linear",
+                "UnmetDemandToAmountRelation": "Constant",
+                "IsHousingResource": "True"
+            }
+        },
+        "OperationDemand": {
+            "Shelter": {
+                "Amount": 0,
+                "FunctionalityToAmountRelation": "Constant",
+                "IsHousingResource": "True"
+            }
+        }
     }
+
 }
