@@ -391,12 +391,13 @@ Components' damage is assigned using the ListDamageInput class, whose parameter 
 .. toggle::
 
     .. code-block:: json
-       
+               
         "DamageInput": {
         "ClassName": "ListDamageInput",
         "FileName": "list_damage_input",
         "Parameters": [0.4, 0.0, 0.0, 0.0, 0.4, 0.0, 0.0, 0.4, 0.4, 0.0, 0.0]
-    },  
+        },  
+
 
 Resources
 `````````

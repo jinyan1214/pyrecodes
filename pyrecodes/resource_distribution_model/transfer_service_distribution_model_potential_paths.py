@@ -10,6 +10,7 @@ class TransferServiceDistributionModelPotentialPaths(AbstractResourceDistributio
     """
     | Class to check whether a resource can be transferred between localities. 
     | Potential paths are defined among localities. The class checks whether any of the potential paths can be used to transfer the resource.
+    
     """
 
     components: list[Component]
@@ -32,8 +33,8 @@ class TransferServiceDistributionModelPotentialPaths(AbstractResourceDistributio
     def create_potential_paths(self) -> None:
         """ 
         | The method finds the links that are used in potential paths. 
-        | It creates a list of links that is latter queried to find the 
-        optimal path from the list of potential paths.
+        | It creates a list of links that is latter queried to find the optimal path from the list of potential paths.
+
         """    
 
         self.potential_paths = {} 
@@ -69,8 +70,8 @@ class TransferServiceDistributionModelPotentialPaths(AbstractResourceDistributio
     def distribute(self, time_step: int) -> None:
         """
         | Distribute method updates the potential paths between all locality pairs.
-        | This is done implicitly when using the potential path sets,
-        as components' transfer service supply is updated in the system class.
+        | This is done implicitly when using the potential path sets, as components' transfer service supply is updated in the system class.
+        
         """
 
         pass                                                                                    
@@ -80,6 +81,7 @@ class TransferServiceDistributionModelPotentialPaths(AbstractResourceDistributio
         | Method finds the optimal path, from all potential paths between two localities.
         | Optimality is defined as maximizing the transfer service supply.
         | Transfer service supply of a path is the minimal supply among its constitutive links.
+        
         """   
 
         potential_path_links = self.potential_paths.get(f'from {int(start_locality)} to {int(end_locality)}', None)

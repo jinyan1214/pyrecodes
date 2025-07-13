@@ -67,6 +67,7 @@ class InfrastructureInterfaceRecoveryModel(AbstractRecoveryModel):
         """
         | Perform recovery for a time step. Recovery here means simulating the pre-defined post-disaster supply/demand dynamics.
         | Recovery happens at each time step. Recovery time steps are not considered for Infrastructure Interfaces as the supply/dynamic is predefined.
+        
         Args:
             time_step (int): The time step for which recovery is performed.
         """

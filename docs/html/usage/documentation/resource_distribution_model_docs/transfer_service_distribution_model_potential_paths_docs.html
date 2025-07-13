@@ -207,6 +207,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../what_is_pyrecodes.html">What is pyrecodes?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installing pyrecodes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">How to use pyrecodes?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to_extend_pyrecodes.html">How to extend pyrecodes?</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/example_1.html">Example 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/example_2.html">Example 2</a></li>
@@ -402,9 +403,8 @@
 <span class="sig-name descname"><span class="pre">create_potential_paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyrecodes.resource_distribution_model.transfer_service_distribution_model_potential_paths.TransferServiceDistributionModelPotentialPaths.create_potential_paths" title="Link to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">The method finds the links that are used in potential paths. </div>
-<div class="line">It creates a list of links that is latter queried to find the </div>
+<div class="line">It creates a list of links that is latter queried to find the optimal path from the list of potential paths.</div>
 </div>
-<p>optimal path from the list of potential paths.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -412,9 +412,8 @@
 <span class="sig-name descname"><span class="pre">distribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyrecodes.resource_distribution_model.transfer_service_distribution_model_potential_paths.TransferServiceDistributionModelPotentialPaths.distribute" title="Link to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">Distribute method updates the potential paths between all locality pairs.</div>
-<div class="line">This is done implicitly when using the potential path sets,</div>
+<div class="line">This is done implicitly when using the potential path sets, as components’ transfer service supply is updated in the system class.</div>
 </div>
-<p>as components’ transfer service supply is updated in the system class.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -511,7 +510,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2024, Nikola Blagojević
+                Copyright &#169; 2024, Nikola Blagojević, Božidar Stojadinović
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

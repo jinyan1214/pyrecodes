@@ -13,6 +13,7 @@ Welcome to pyrecodes's documentation!
    usage/what_is_pyrecodes
    usage/installation
    usage/user_guide
+   usage/how_to_extend_pyrecodes
    usage/examples
    usage/documentation
    usage/how_to_cite

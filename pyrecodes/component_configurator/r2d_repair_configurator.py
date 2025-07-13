@@ -99,6 +99,7 @@ class R2DTransportationRepairConfigurator(R2DRepairConfigurator):
         | Method to get the repair cost of the component from the R2D output files.
         | R2D provides the repair cost of transportation components (Bridge, Roadway, Tunnel) in (2020) dollar values, not ratios as for buildings.
         | Repair cost is taken as the maximum over all repair cost ratios provided by R2D.
+
         *TODO* This method might be redundant, since parent class takes care of the repair cost calculation.
         """
         if 'Repair' in component_data['Loss']:

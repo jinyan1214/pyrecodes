@@ -16,6 +16,7 @@ class UtilityDistributionModel(AbstractResourceDistributionModel):
     | Class to distribute resources in the system. This is the simplest distribution model, which distributes resources based on the priority of the components.
     | Resource distribution is done using the system matrix, containing the supply and demand of each component.
     | No physical laws (e.g., power flow or water flow physics) are considered in the distribution of resources.
+
     """
     components: list[Component]
     resource_name: str
@@ -211,8 +212,8 @@ class UtilityDistributionModel(AbstractResourceDistributionModel):
     
     def get_path_functionality(self, start_locality, end_locality, transfer_service_demand):
         """
-        | Method calculates path functionality by comparing the transfer service supply
-        of the optimal path with the demand.
+        | Method calculates path functionality by comparing the transfer service supply of the optimal path with the demand.
+        
         """   
         if start_locality == end_locality:            
             return 1.0

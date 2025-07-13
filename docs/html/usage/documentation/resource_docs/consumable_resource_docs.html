@@ -207,6 +207,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../what_is_pyrecodes.html">What is pyrecodes?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installing pyrecodes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user_guide.html">How to use pyrecodes?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how_to_extend_pyrecodes.html">How to extend pyrecodes?</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/example_1.html">Example 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/example_2.html">Example 2</a></li>
@@ -390,14 +391,9 @@
 <dd><p>Bases: <a class="reference internal" href="concrete_resource_docs.html#pyrecodes.resource.concrete_resource.ConcreteResource" title="pyrecodes.resource.concrete_resource.ConcreteResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConcreteResource</span></code></a></p>
 <div class="line-block">
 <div class="line">Class to simulate a resource whose supply decreases when it is consumed.</div>
-</div>
-<div class="line-block">
 <div class="line">Both initial and current amounts are reduced by the consumption amount. </div>
+<div class="line">The reason is that the initial amount represents the amount that the component provides when functionality level is 1 and this value is also decreased for a consumable resource.</div>
 </div>
-<div class="line-block">
-<div class="line">The reason is that the initial amount represents the amount that the component provides when </div>
-</div>
-<p>functionality level is 1 and this value is also decreased for a consumable resource.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyrecodes.resource.consumable_resource.ConsumableResource.update_based_on_consumption">
 <span class="sig-name descname"><span class="pre">update_based_on_consumption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">consumption</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyrecodes.resource.consumable_resource.ConsumableResource.update_based_on_consumption" title="Link to this definition">¶</a></dt>
@@ -440,7 +436,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2024, Nikola Blagojević
+                Copyright &#169; 2024, Nikola Blagojević, Božidar Stojadinović
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

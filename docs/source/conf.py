@@ -11,8 +11,8 @@ sys.path.insert(0, '../pyrecodes/')
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'pyrecodes'
-copyright = '2024, Nikola Blagojević'
-author = 'Nikola Blagojević'
+copyright = '2024, Nikola Blagojević, Božidar Stojadinović'
+author = 'Nikola Blagojević, Božidar Stojadinović'
 release = 'v0.2.0'
 
 # -- General configuration ---------------------------------------------------
