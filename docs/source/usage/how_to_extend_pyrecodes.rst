@@ -4,8 +4,9 @@ How to extend pyrecodes?
 pyrecodes is designed to be extensible and modular. Developers can extend the functionality of pyrecodes in the following ways:
 
 - Connect pyrecodes to third-party damage simulators
-- Add new components
-- Add new component recovery models
+- Add new component classes
+- Add new system classes
+- Add new component recovery model classes
 - Add new or connect to existing third-party resource distribution models
 - Add new resource allocation strategies
 - Add new resilience calculators
@@ -18,7 +19,7 @@ This section details how to extend pyrecodes to:
 Connect pyrecodes to third-party damage simulators
 ---------------------------------------------------
 
-To run pyrecodes recovery and resilience assessment, the user needs to provide damage states of components in the system. These damage states can be provided by a damage simulator. The term "damage simulator" refers to the software that follows the traditional regional risk assessment workflow, where hazard, exposure and vulnerability modules are combined to assess the damage states of components in the system following a scenario disaster. 
+To run pyrecodes recovery and resilience assessment, the user needs to provide damage states of components in the system due to a scenario disaster. These damage states can be provided by a damage simulator. The term "damage simulator" refers to software that follows the traditional regional risk assessment workflow, where hazard, exposure and vulnerability modules are combined to assess the damage states of components in the system following a scenario disaster. 
 
 Several open-source damage simulators have been developed and are available for use (e.g., SimCenter's R2D, OpenQuake, CLIMADA). This section presents an overview of how pyrecodes is connected to SimCenter's R2D damage simulator using the damage_to_recovery API and points to the relevant pyrecodes modules. The aim is to detail the R2D-pyrecodes connection and provide a template for developers to connect pyrecodes to other damage simulators.
 
@@ -27,9 +28,9 @@ The damage simulator needs to provide two files to pyrecodes:
 - **file containing component damage states** (e.g., damage.json)
 - **file containing component characteristics** (e.g., exposure.json)
 
-The two files are passed to the pyrecodes subsystem creator class to create components in the pyrecodes system. The subsystem creator class defined for R2D is in the pyrecodes/subsystem_creator/r2d_subsystem_creator.py module. JSON format is used to define the damage and exposure files for the R2D-pyrecodes API.
+The two files are passed to the pyrecodes `subsystem creator class <./documentation/subsystem_creator_docs/r2d_subsystem_creator_docs.html>`_ to create components in the pyrecodes system. The subsystem creator class defined for R2D is in the pyrecodes/subsystem_creator/r2d_subsystem_creator.py module. JSON format is used to define the damage and exposure files for the R2D-pyrecodes API. pyrecodes can be easily configured to use other file formats, such as CSV, to define the damage and exposure files.
 
-In addition to the subsystem creator class, a damage simulator needs to have its pyrecodes damage input class defined. This class assigns the damage states to the components once the recovery simulation is initiated. The damage input class for R2D is is in the pyrecodes/damage_input/r2d_damage_input.py module.
+In addition to the subsystem creator class, a damage simulator needs to have its pyrecodes damage input class defined. This class assigns the damage states to the components once the recovery simulation is initiated. The `damage input class <./documentation/damage_input_docs/r2d_damage_input_docs.html>`_ for R2D is is in the pyrecodes/damage_input/r2d_damage_input.py module.
 
 `Example 3 <./examples/example_3.html>`_, `Example 4 <./examples/example_4.html>`_ and `Example 5 <./examples/example_5.html>`_ illustrate how pyrecodes uses the output provided by the R2D's damage simulator.
 
@@ -48,9 +49,9 @@ pyrecodes allows the integration of third-party resource distribution models usi
 
 Multiple terms are used interchangably to describe the resource distribution model, such as resource flow simulator or infrastructure simulator. They all serve the same purpose - assessing the component's resource demand fulfillment at a time step of the recovery simulation.
 
-Resource distribution models are called at the "distribute resources" step of the pyrecodes recovery simulation. To call a third-party resource distribution model using the "system to systems" API, several classes need to be implemented connecting pyrecodes to the third-party resource distribution model. These are divided into simulator-independent and simulator-dependent classes. Although simulator-independent classes need to be defined for each third-party simulator they are almost identical and are used to instantiate and set up the third-party simulator in the pyrecodes model. The simulator-dependent class or classes need to be written for each third-party simulator and can be seen as wrappers around the third-party simulator.
+Resource distribution models are called at the "distribute resources" step of the pyrecodes recovery simulation (see Figure below). To call a third-party resource distribution model using the "system to systems" API, several classes need to be implemented connecting pyrecodes to the third-party resource distribution model. These are divided into simulator-independent and simulator-dependent classes. Although simulator-independent classes need to be defined for each third-party simulator they are almost identical and are used to instantiate and set up the third-party simulator in the pyrecodes model. The simulator-dependent class or classes need to be written for each third-party simulator and can be seen as wrappers around the third-party simulator.
 
-Modules used to integrate the REWET water distribution model and the residual demand traffic distribution model are outlined in the figure below. Note that each resource distribution model in pyrecodes also requires a resource distribution model constructor class. The dictionary used to exchange information between simulator-independent and simulator-dependent modules follows the same structure as the exposure JSON file used in the damage-to-recovery API with a few minor modifications to fully capture the dynamic component's supply and demand.
+Modules used to integrate the REWET water distribution model and the residual demand traffic distribution model are outlined in the figure below (`rewet_distribution_model <./documentation/resource_distribution_model_docs/rewet_distribution_model_docs.html>`_ and `residual_demand_traffic_distribution_model <./documentation/resource_distribution_model_docs/residual_demand_traffic_distribution_model_docs.html>`_). Note that each resource distribution model in pyrecodes also requires a resource distribution model constructor class (e.g., `rewet_distribution_model_constructor <./documentation/resource_distribution_model_docs/rewet_distribution_model_constructor_docs.html>`_). The dictionary used to exchange information between simulator-independent and simulator-dependent modules follows the same structure as the exposure JSON file used in the damage-to-recovery API with a few minor modifications to fully capture the dynamic component's supply and demand.
 
 `Example 5 <./examples/example_5.html>`_ illustrates the application of third-party infrastructure models in pyrecodes.
 
